@@ -3,6 +3,6 @@
 module.exports = {
     HOST: "0.0.0.0",
     PORT: 3000,
-    DB_URL: "mongodb+srv://Rakesh:Qwerty%402020@homie-development-cluster-fu8mg.mongodb.net/Bank-Retail",
+    DB_URL: "mongodb+srv://vijayvijay1997:sunder.vj@cluster0.s3gkt.mongodb.net/Bank-Retail",
     ADMIN_COLLECTION: "Admin"
   };

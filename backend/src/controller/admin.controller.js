@@ -82,6 +82,7 @@ const login = async (req, res) => {
           code: 200,
           status: "success",
           message: `you have been logged in successfully`,
+          result: login_with_username_and_password[0].Account_Number
         });
       } else {
         res.status(200).json({

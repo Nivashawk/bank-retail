@@ -1,0 +1,26 @@
+<section class="home-main-container">
+    <app-header></app-header>
+    <div class="home-container">
+        <div class="home-center-container">
+            <h1 class="total-balance-heading">
+                TOTAL BALANCE
+            </h1>
+            <div class="submit-button" (click)="check_balance()">
+                CHECK BALANCE
+            </div>
+            <h1 *ngIf="balance; else checkbalance" class="total-balance">
+                {{balance}}
+            </h1>
+            <ng-template #checkbalance>
+                <p class="check">click above button to check current balance</p>
+              </ng-template>
+
+            <div class="submit-button" (click)="route_to_fund()">
+                FUND TRANSFER
+            </div>
+            <div class="submit-button" (click)="route_to_deposy()">
+                FIXED DEPOSIT
+            </div>
+        </div>
+    </div>
+</section>

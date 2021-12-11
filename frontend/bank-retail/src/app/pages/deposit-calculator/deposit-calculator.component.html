@@ -1,0 +1,95 @@
+<section class="deposit-main-container">
+  <app-header></app-header>
+  <div class="deposit-container">
+    <div class="deposit-center-container">
+      <h1 class="total-balance-heading">TOTAL BALANCE</h1>
+      <h1 class="total-balance">{{ balance }}</h1>
+    </div>
+    <div class="deposit-form-container">
+      <form [formGroup]="deposit_form" class="deposit-form-container">
+        <input
+          type="text"
+          formControlName="Principal"
+          class="form__field"
+          placeholder="Enter Principal"
+        />
+        <small
+          class="error"
+          *ngIf="
+            deposit_form.get('Principal')!.invalid &&
+            deposit_form.get('Principal')!.touched
+          "
+          >Required Principal</small
+        >
+
+        <input
+          type="text"
+          formControlName="Interest_Rate"
+          class="form__field"
+          placeholder="Enter Interest Rate"
+        />
+        <small
+          class="error"
+          *ngIf="
+            deposit_form.get('Interest_Rate')!.invalid &&
+            deposit_form.get('Interest_Rate')!.touched
+          "
+          >Required Interest Rate</small
+        >
+
+        <label class="label" for="nterest_Compounding">Interest Compounding</label>
+        <select
+          id="Interest_Compounding"
+          formControlName="Interest_Compounding"
+          class="form__field"
+          placeholder="Enter Interest_Compounding"
+        >
+        <option value="12">Monthly</option>
+        <option value="4" selected>Quarterly</option>
+        <option value="2">Half-yearly</option>
+        <option value="1">Yearly</option>
+        </select>
+        <small
+        class="error"
+        *ngIf="
+          deposit_form.get('Interest_Compounding')!.invalid &&
+          deposit_form.get('Interest_Compounding')!.touched
+        "
+        >Required Interest Compounding</small
+        >
+
+        <input
+          type="text"
+          formControlName="months"
+          class="form__field"
+          placeholder="Enter months"
+        />
+        <small
+          class="error"
+          *ngIf="
+            deposit_form.get('months')!.invalid &&
+            deposit_form.get('months')!.touched
+          "
+          >Required months</small
+        >
+
+        <button
+          type="submit"
+          class="submit-button"
+          [formGroup]="deposit_form"
+          (click)="onSubmit()"
+        >
+          CALCULATE
+        </button>
+        <div *ngIf="submitError" class="error">
+          Please fill all the required fields
+        </div>
+      </form>
+      <div class="total-balance-heading">
+        Maturity Value = <a class="total-balance">{{calculation}}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+

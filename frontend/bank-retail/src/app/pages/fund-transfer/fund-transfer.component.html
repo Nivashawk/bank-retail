@@ -1,0 +1,24 @@
+<section class="fund-main-container">
+  <app-header></app-header>
+  <div class="fund-container">
+    <div class="fund-center-container">
+      <h1 class="total-balance-heading">TOTAL BALANCE</h1>
+      <h1 class="total-balance">{{balance}}</h1>
+    </div>
+    <div class="fund-form-container">
+        <form [formGroup]="fund_form" class="fund-form-container">
+
+            <input  type="text" formControlName="Account_number" class="form__field" placeholder="Enter Receipt's Account Number">
+            <small class="error" *ngIf="fund_form.get('Account_number')!.invalid && fund_form.get('Account_number')!.touched">Required Receipt's Account Number</small>
+
+            <input  type="text" formControlName="Amount" class="form__field" placeholder="Enter Amount">
+            <small class="error" *ngIf="fund_form.get('Amount')!.invalid && fund_form.get('Amount')!.touched">Required Amount</small>
+                
+            <button type="submit" class="submit-button" [formGroup]="fund_form" (click)="onSubmit()">TRANSFER FUND</button>
+            <div *ngIf="submitError" class="error">
+                Please fill all the required fields
+            </div>
+        </form>
+    </div>
+  </div>
+</section>

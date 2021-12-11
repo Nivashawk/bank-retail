@@ -1,0 +1,59 @@
+<section class="login-bg-conyainer">
+  <app-sidebar></app-sidebar>
+  <div class="login-main-container">
+    <div class="login-container">
+      <h1 class="login-heading">LOGIN</h1>
+      <div class="login-form-container">
+        <form [formGroup]="login_form" class="login-form-container">
+          <input
+            type="text"
+            formControlName="Account_number"
+            class="form__field"
+            placeholder="Enter Account Number"
+          />
+          <small
+            class="error"
+            *ngIf="
+              login_form.get('Account_number')!.invalid &&
+              login_form.get('Account_number')!.touched
+            "
+            >Required Account Number</small
+          >
+
+          <input
+            type="text"
+            formControlName="Password"
+            class="form__field"
+            placeholder="Enter Password"
+          />
+          <small
+            class="error"
+            *ngIf="
+              login_form.get('Password')!.invalid &&
+              login_form.get('Password')!.touched
+            "
+            >Required Password</small
+          >
+
+          <button
+            type="submit"
+            class="submit-button"
+            [formGroup]="login_form"
+            (click)="onSubmit()"
+          >
+            LOGIN
+          </button>
+          <div *ngIf="submitError" class="error">
+            Please fill all the required fields
+          </div>
+          <p class="register-para">
+            If you are a new user please
+            <a class="highlight-register" (click)="route_to_register()"
+              >register here</a
+            >
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

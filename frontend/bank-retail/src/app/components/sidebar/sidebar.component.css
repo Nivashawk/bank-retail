@@ -1,0 +1,28 @@
+.side-bar-bg {
+    background: var(--secondary-color);
+    height: 100vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-bar-heading {
+    font-family: var(--Font);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4vw;
+    line-height: 72px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.side-bar-description {
+    font-family: var(--Font);
+    font-style: normal;
+    font-weight: 100;
+    font-size: 1vw;
+    text-align: center;
+    color: var(--primary-color);
+}
