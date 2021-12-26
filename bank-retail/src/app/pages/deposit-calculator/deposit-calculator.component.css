@@ -1,0 +1,101 @@
+.deposit-main-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.deposit-container {
+    height: 92vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.total-balance-heading {
+    font-family: var(--Font);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.total-balance {
+    font-family: var(--Font);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 72px;
+    text-align: center;
+    color: var(--highlighted-color);
+
+}
+
+.deposit-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__field {
+    border: 1px solid var(--secondary-color);
+    box-sizing: border-box;
+    border-radius: 15px;
+    width: 30vw;
+    height: 5vh;
+    margin: 10px 0 10px 0;
+    font-family: var(--Font);
+    color: var(--secondary-color);
+    font-style: normal;
+    font-weight: bold;
+    padding: 0 0 0 10px;
+}
+
+::placeholder {
+    font-family: var(--Font);
+    color: var(--secondary-color);
+    font-style: normal;
+    font-weight: bold;
+    padding: 0 0 0 10px;
+  }
+
+  .submit-button{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    margin: 10px 0 10px 0;
+    padding: 0px 10px 0 10px;
+    cursor: pointer;
+  }
+
+  .highlight-register
+  {
+    font-family: var(--Font);
+    color: var(--highlighted-color);
+  }
+
+  .register-para
+  {
+    font-family: var(--Font);
+    color: var(--secondary-color);
+    font-style: normal;
+    margin: 10px 0 0 0;
+  }
+
+  .error
+  {
+    font-family: var(--Font);
+    color: var(--highlighted-color);
+  }
+
+  .label
+  {
+    font-family: var(--Font);
+    color: var(--secondary-color);
+  }

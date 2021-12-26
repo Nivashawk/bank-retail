@@ -1,0 +1,113 @@
+<section class="register-bg-conyainer">
+  <app-sidebar></app-sidebar>
+  <div class="register-main-container">
+    <div class="register-container">
+      <h1 class="register-heading">REGISTER</h1>
+      <div class="register-form-container">
+        <form [formGroup]="register_form" class="register-form-container">
+          <input
+            type="text"
+            formControlName="First_Name"
+            class="form__field"
+            placeholder="Enter First Name"
+          />
+          <small
+            class="error"
+            *ngIf="
+              register_form.get('First_Name')!.invalid &&
+              register_form.get('First_Name')!.touched
+            "
+            >Required First Name</small
+          >
+
+          <input
+            type="text"
+            formControlName="Last_Name"
+            class="form__field"
+            placeholder="Enter Last Name"
+          />
+          <small
+            class="error"
+            *ngIf="
+              register_form.get('Last_Name')!.invalid &&
+              register_form.get('Last_Name')!.touched
+            "
+            >Required Last Name</small
+          >
+
+          <input
+            type="text"
+            formControlName="Account_Number"
+            class="form__field"
+            placeholder="Enter Account Number"
+          />
+          <small
+            class="error"
+            *ngIf="
+              register_form.get('Account_Number')!.invalid &&
+              register_form.get('Account_Number')!.touched
+            "
+            >Required Account Number</small
+          >
+
+          <input
+            type="text"
+            formControlName="Aadhar_Number"
+            class="form__field"
+            placeholder="Enter Aadhar Number"
+          />
+          <small
+            class="error"
+            *ngIf="
+              register_form.get('Aadhar_Number')!.invalid &&
+              register_form.get('Aadhar_Number')!.touched
+            "
+            >Required Aadhar Number</small
+          >
+
+          <input
+            type="text"
+            formControlName="Pan_Number"
+            class="form__field"
+            placeholder="Enter Pan Number"
+          />
+          <small
+            class="error"
+            *ngIf="
+              register_form.get('Pan_Number')!.invalid &&
+              register_form.get('Pan_Number')!.touched
+            "
+            >Required Pan Number</small
+          >
+
+          <input
+            type="text"
+            formControlName="Password"
+            class="form__field"
+            placeholder="Enter Password"
+          />
+          <small
+            class="error"
+            *ngIf="
+              register_form.get('Password')!.invalid &&
+              register_form.get('Password')!.touched
+            "
+            >Required Password</small
+          >
+
+          <button
+            type="submit"
+            class="submit-button"
+            [formGroup]="register_form"
+            (click)="onSubmit()"
+          >
+            REGISTER
+          </button>
+          <div *ngIf="submitError" class="error">
+            Please fill all the required fields
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
